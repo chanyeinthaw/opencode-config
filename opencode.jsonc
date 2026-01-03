@@ -7,4 +7,15 @@
     },
     "doom_loop": "ask",
   },
+  "mcp": {
+    "playwriter": {
+      "type": "local",
+      "command": [
+        "bun",
+        "x",
+        "playwriter"
+      ],
+      "enabled": true,
+    }
+  }
 }
