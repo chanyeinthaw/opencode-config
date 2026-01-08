@@ -16,6 +16,15 @@
         "playwriter"
       ],
       "enabled": true,
-    }
+    },
+    "notion": {
+      "type": "local",
+      "command": [
+        "bun",
+        "x",
+        "mcp-remote",
+        "https://mcp.notion.com/mcp"
+      ],
+    },
   }
 }

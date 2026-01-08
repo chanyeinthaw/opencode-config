@@ -13,6 +13,7 @@ const SOUNDS = {
   success: "/System/Library/Sounds/Glass.aiff",
   error: "/System/Library/Sounds/Basso.aiff",
   complete: "/System/Library/Sounds/Ping.aiff",
+  // complete: "~/.config/opencode/sound/idle.mp3",
 };
 
 async function playSound(sound: keyof typeof SOUNDS): Promise<void> {
