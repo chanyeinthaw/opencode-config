@@ -2,8 +2,6 @@
  * notify plugin - plays sound on task completion
  *
  * uses macos afplay to play system sounds when:
- * - swarm completes successfully
- * - swarm fails/aborts
  * - session becomes idle (response complete)
  */
 
@@ -30,19 +28,6 @@ export const NotifyPlugin: Plugin = async () => {
     event: async ({ event }) => {
       if (event.type === "session.idle") {
         await playSound("complete");
-      }
-    },
-
-    "tool.execute.after": async (toolInput, output) => {
-      if (toolInput.tool === "swarm_finalize") {
-        const result = JSON.parse(output.output ?? "{}");
-        if (result.success) {
-          await playSound("success");
-        }
-      }
-
-      if (toolInput.tool === "swarm_abort") {
-        await playSound("error");
       }
     },
   };

@@ -8,6 +8,10 @@
     "doom_loop": "ask",
   },
   "mcp": {
+    "figma": {
+      "type": "remote",
+      "url": "http://127.0.0.1:3845/mcp"
+    },
     "playwriter": {
       "type": "local",
       "command": [
@@ -15,7 +19,6 @@
         "x",
         "playwriter"
       ],
-      "enabled": true,
     },
     "notion": {
       "type": "local",
@@ -25,6 +28,7 @@
         "mcp-remote",
         "https://mcp.notion.com/mcp"
       ],
+      "enabled": false
     },
   }
 }

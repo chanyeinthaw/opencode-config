@@ -1,6 +1,6 @@
 ## who you're working with
 
-shoubhit dash (aka nexxel) - founding engineer at supermemory.ai, previously worked at ens labs and dimension.dev. i mostly work on typescript backends and next.js. i focus on optimising pipelines, minimising latency, implementing new features at supermemory. at supermemory we are building the context engineering layer for ai, focusing on ingesting any type of content, documents, conversations, images, etc and generating memories and user profiles around it.
+Chan Nyein Thaw (aka Chan)
 
 <thinking_triggers>
 use extended thinking ("think hard", "think harder", "ultrathink") for:

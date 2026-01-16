@@ -15,22 +15,11 @@ my custom opencode setup
 | `repo_exports` | map public API exports |
 | `repo_file` | read file contents with optional line range |
 | `repo_cleanup` | remove cached repos |
-| `swarm_init` | start a swarm session, saves git state |
-| `swarm_plan_prompt` | get decomposition prompt |
-| `swarm_plan_validate` | validate task breakdown |
-| `swarm_worktree_create` | create isolated git worktree for a task |
-| `swarm_spawn` | spawn a worker agent |
-| `swarm_merge_task` | merge completed task back |
-| `swarm_finalize` | finish swarm, soft reset with changes staged |
-| `swarm_abort` | abort and revert all changes |
 
 ## commands
 
 | command | description |
 |---------|-------------|
-| `/swarm` | start a multi-agent workflow for complex tasks |
-| `/swarm-abort` | abort current swarm and revert all changes |
-| `/swarm-status` | check status of running swarm |
 | `/graphite` | use graphite cli for stacked PRs |
 | `/rmslop` | remove ai-generated code slop |
 
@@ -39,17 +28,3 @@ my custom opencode setup
 | file | description |
 |------|-------------|
 | `effect.md` | effect-ts patterns and best practices |
-
-## swarm workflow
-
-for complex multi-file changes:
-
-```
-/swarm add rate limiting to all api endpoints
-```
-
-swarm will:
-- break it into parallel tasks
-- spawn workers in isolated worktrees
-- review each change
-- merge everything back

@@ -53,7 +53,9 @@ const formatStatus = (status: StatusResult): string => {
   if (files.length === 0) return "(clean)";
 
   const display = files.slice(0, 10).join("\n");
-  return files.length > 10 ? `${display}\n... +${files.length - 10} more` : display;
+  return files.length > 10
+    ? `${display}\n... +${files.length - 10} more`
+    : display;
 };
 
 const formatSyncStatus = (status: StatusResult): string => {
@@ -105,6 +107,8 @@ ${diff.trim() || "(no previous commit)"}`;
     );
 
     const result = await Effect.runPromise(Effect.either(program));
-    return result._tag === "Left" ? `Git error: ${result.left.message}` : result.right;
+    return result._tag === "Left"
+      ? `Git error: ${result.left.message}`
+      : result.right;
   },
 });
