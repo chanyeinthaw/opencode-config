@@ -1,8 +1,88 @@
 ---
-description: Convert a feature to PRD
+description: Generate a Product Requirements Document (PRD) for a new feature from current conversation.
 agent: plan
 ---
 
 Feature ID: $1
 
-Convert this plan into structured PRD items by using prdman skill. Be specific about acceptance criteria.
+By using prdman skill, convert this conversation into a structured PRD items that are clear, actionable and suitable for implementation.
+
+---
+
+
+## The Job
+
+1. Receive a feature description from the user
+2. Ask 3-5 essential clarifying questions (with lettered options)
+3. Generate a structured PRD items based on answers
+4. Use prdman skill to save the PRD items.
+
+**Important:** Do NOT start implementing. Just create the PRD items.
+
+---
+
+## Step 1: Clarifying Questions
+
+Ask only critical questions where the initial prompt is ambiguous. Focus on:
+
+- **Problem/Goal:** What problem does this solve?
+- **Core Functionality:** What are the key actions?
+- **Scope/Boundaries:** What should it NOT do?
+- **Success Criteria:** How do we know it's done?
+
+### Format Questions Like This:
+
+```
+1. What is the primary goal of this feature?
+   A. Improve user onboarding experience
+   B. Increase user retention
+   C. Reduce support burden
+   D. Other: [please specify]
+
+2. Who is the target user?
+   A. New users only
+   B. Existing users only
+   C. All users
+   D. Admin users only
+
+3. What is the scope?
+   A. Minimal viable version
+   B. Full-featured implementation
+   C. Just the backend/API
+   D. Just the UI
+```
+
+This lets users respond with "1A, 2C, 3B" for quick iteration.
+
+---
+
+## Step 2: PRD Structure
+
+Check the PRD structure by using the prdman skill.
+
+Each PRD item should be small enough to implement in one focused session.
+
+---
+
+## Writing for Junior Developers
+
+The PRD reader may be a junior developer or AI agent. Therefore:
+
+- Be explicit and unambiguous
+- Avoid jargon or explain it
+- Provide enough detail to understand purpose and core logic
+- Number requirements for easy reference
+- Use concrete examples where helpful
+
+---
+
+## Checklist
+
+Before saving the PRD:
+
+- [ ] Asked clarifying questions with lettered options
+- [ ] Incorporated user's answers
+- [ ] User stories are small and specific
+- [ ] Functional requirements are numbered and unambiguous
+- [ ] Non-goals section defines clear boundaries
+- [ ] Saved the PRD items using prdman skill
