@@ -1,11 +1,11 @@
 ---
-description: Generate a Product Requirements Document (PRD) for a new feature from current conversation.
+description: Generate a Product Requirements Document (PRD) with stories from current conversation.
 agent: plan
 ---
 
-Feature ID: $1
+PRD ID: $1
 
-By using prdman skill, convert this conversation into a structured PRD items that are clear, actionable and suitable for implementation.
+By using prdman skill, convert this conversation into structured stories that are clear, actionable and suitable for implementation.
 
 ---
 
@@ -14,10 +14,10 @@ By using prdman skill, convert this conversation into a structured PRD items tha
 
 1. Receive a feature description from the user
 2. Ask 3-5 essential clarifying questions (with lettered options)
-3. Generate a structured PRD items based on answers
-4. Use prdman skill to save the PRD items.
+3. Generate structured stories based on answers
+4. Use prdman skill to save the stories.
 
-**Important:** Do NOT start implementing. Just create the PRD items.
+**Important:** Do NOT start implementing. Just create the stories.
 
 ---
 
@@ -56,17 +56,17 @@ This lets users respond with "1A, 2C, 3B" for quick iteration.
 
 ---
 
-## Step 2: PRD Structure
+## Step 2: Story Structure
 
-Check the PRD structure by using the prdman skill.
+Check the story structure by using the prdman skill.
 
-Each PRD item should be small enough to implement in one focused session.
+Each story should be small enough to implement in one focused session.
 
 ---
 
 ## Writing for Junior Developers
 
-The PRD reader may be a junior developer or AI agent. Therefore:
+The story reader may be a junior developer or AI agent. Therefore:
 
 - Be explicit and unambiguous
 - Avoid jargon or explain it
@@ -82,7 +82,7 @@ Before saving the PRD:
 
 - [ ] Asked clarifying questions with lettered options
 - [ ] Incorporated user's answers
-- [ ] User stories are small and specific
+- [ ] Stories are small and specific
 - [ ] Functional requirements are numbered and unambiguous
 - [ ] Non-goals section defines clear boundaries
-- [ ] Saved the PRD items using prdman skill
+- [ ] Saved the stories using prdman skill

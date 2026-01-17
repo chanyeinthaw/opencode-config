@@ -1,34 +1,34 @@
 ---
-description: Iterate on one PRD item of given feature
+description: Iterate on one story of given PRD
 agent: build
 ---
 
-- Feature ID: $1
+- PRD ID: $1
 - Use prdman skill
 
-**PRD Items**
+**Stories**
 !`prdman list $1`
 
 You are an autonomous coding agent working on a software project.
 
 ## Your Task
 
-1. Check the list of PRD items
+1. Check the list of stories
 2. Read the codebase patterns at `codebase-patterns.md`
 3. Read the progress log at `progress.md`
-4. Pick the **highest priority** user story where `status: todo`
-5. Implement that single PRD item
+4. Pick the **highest priority** story where `status: todo`
+5. Implement that single story
 6. Run quality checks (e.g., typecheck, lint, test, format - use whatever your project requires)
 7. Update AGENTS.md files if you discover reusable patterns (see below)
-8. If checks pass, commit ALL changes with message: `[FEATURE ID] - [PRD Name]`
-9. Update the PRD item's status to `done` for the completed PRD item via `prdman update-status` command
+8. If checks pass, commit ALL changes with message: `[PRD ID] - [Story Name]`
+9. Update the story's status to `done` for the completed story via `prdman update-status` command
 10. Append your progress to `progress.md`
 
 ## Progress Report Format
 
 APPEND to progress.md (never replace, always append):
 ```
-## [Date/Time]: [FEATURE ID] - [PRD Item ID]
+## [Date/Time]: [PRD ID] - [Story ID]
 - What was implemented
 - Files changed
 - **Learnings for future iterations:**
@@ -72,7 +72,7 @@ Before committing, check if any edited files have learnings worth preserving in 
 - "Field names must match the template exactly"
 
 **Do NOT add:**
-- PRD item specific implementation details
+- Story-specific implementation details
 - Temporary debugging notes
 - Information already in `progress.md`
 
@@ -87,6 +87,6 @@ Only update AGENTS.md if you have **genuinely reusable knowledge** that would he
 
 ## Important
 
-- Work on ONE PRD item per iteration
+- Work on ONE story per iteration
 - Keep CI green
 - Read the `codebase-patterns.md` file before starting
