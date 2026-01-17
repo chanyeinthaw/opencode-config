@@ -36,3 +36,34 @@ reference these when relevant
 - always use lowercase text. this does not mean not using camelCase when applicable
 - commit messages should be short and to the point
 - default to using the git cli. use graphite when asked to explicitly
+
+# TLDR-Code Usage Rules
+
+## When Working with Code
+
+For code-related queries, prefer TLDR aka tldr skills over Grep/Read:
+
+| Task | OLD way | NEW way |
+|------|---------|---------|
+| Debug function | Grep → Read file | TLDR call_graph + cfg |
+| Understand function | Read file | TLDR call_graph |
+| Check complexity | Read + count | TLDR cfg |
+| Track variable | Grep through files | TLDR dfg |
+| Find dependencies | Grep imports | TLDR pdg |
+| Refactor safely | Read all files | TLDR call_graph (who calls this?) |
+
+## Decision Tree
+
+```
+Is this a code structure question?
+├── YES → Use TLDR
+│   ├── "What calls X?" → call_graph
+│   ├── "How complex?" → cfg
+│   ├── "Where does Y come from?" → dfg
+│   └── "What depends on Z?" → pdg
+│
+└── NO → Use Grep/Read
+    ├── String literal search
+    ├── Config values
+    └── Non-code files
+```

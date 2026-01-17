@@ -1,0 +1,134 @@
+{
+  "edges": [
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "cleanupProjectWorktrees",
+      "to_file": "lib/git.ts",
+      "to_func": "listWorktrees"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "softReset",
+      "to_file": "lib/git.ts",
+      "to_func": "getGit"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "commitInWorktree",
+      "to_file": "lib/git.ts",
+      "to_func": "getGit"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "isGitRepo",
+      "to_file": "lib/git.ts",
+      "to_func": "getGit"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "listWorktrees",
+      "to_file": "lib/git.ts",
+      "to_func": "getGit"
+    },
+    {
+      "from_file": "tool/repo-explorer.ts",
+      "from_func": "ensureRepo",
+      "to_file": "tool/repo-explorer.ts",
+      "to_func": "parseRepoUrl"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "createWorktree",
+      "to_file": "lib/git.ts",
+      "to_func": "getGit"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "getCurrentBranch",
+      "to_file": "lib/git.ts",
+      "to_func": "getGit"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "getDiffStats",
+      "to_file": "lib/git.ts",
+      "to_func": "getGit"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "getCurrentCommit",
+      "to_file": "lib/git.ts",
+      "to_func": "getGit"
+    },
+    {
+      "from_file": "plugin/notify.ts",
+      "from_func": "NotifyPlugin",
+      "to_file": "plugin/notify.ts",
+      "to_func": "playSound"
+    },
+    {
+      "from_file": "tool/repo-explorer.ts",
+      "from_func": "ensureRepo",
+      "to_file": "tool/repo-explorer.ts",
+      "to_func": "cloneRepo"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "pullInWorktree",
+      "to_file": "lib/git.ts",
+      "to_func": "getGit"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "pullInWorktree",
+      "to_file": "lib/git.ts",
+      "to_func": "getCurrentCommit"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "cherryPickCommit",
+      "to_file": "lib/git.ts",
+      "to_func": "getGit"
+    },
+    {
+      "from_file": "tool/repo-explorer.ts",
+      "from_func": "ensureRepo",
+      "to_file": "tool/repo-explorer.ts",
+      "to_func": "fetchAndReset"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "cleanupProjectWorktrees",
+      "to_file": "lib/git.ts",
+      "to_func": "removeWorktree"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "hasUncommittedChanges",
+      "to_file": "lib/git.ts",
+      "to_func": "getGit"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "removeWorktree",
+      "to_file": "lib/git.ts",
+      "to_func": "getGit"
+    },
+    {
+      "from_file": "tool/repo-explorer.ts",
+      "from_func": "runShellSafe",
+      "to_file": "tool/repo-explorer.ts",
+      "to_func": "runShell"
+    },
+    {
+      "from_file": "lib/git.ts",
+      "from_func": "hardReset",
+      "to_file": "lib/git.ts",
+      "to_func": "getGit"
+    }
+  ],
+  "languages": [
+    "typescript"
+  ],
+  "timestamp": 1768661107.150607
+}

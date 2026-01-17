@@ -23,7 +23,7 @@ async function playSound(sound: keyof typeof SOUNDS): Promise<void> {
   } catch {}
 }
 
-export const NotifyPlugin: Plugin = async () => {
+export const NotifyPlugin: Plugin = async (ctx) => {
   return {
     event: async ({ event }) => {
       if (event.type === "session.idle") {
